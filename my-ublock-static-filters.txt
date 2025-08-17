@@ -6,6 +6,7 @@ www.furimawatch.net##button.btn-sm.btn-primary.btn:nth-of-type(3)
 
 !Yafuoku-mytop
 auctions.yahoo.co.jp###promo
+auctions.yahoo.co.jp###wrapper > header.gv-l-header--x08n25swK4TimjnzPqsA:first-child > div.gv-l-headerInner--gmEJwcnBd6SrLgPqMmfH > div.sc-41669be6-0.eJmRbH:nth-child(2)
 auctions.yahoo.co.jp##li.gv-List__item--SB6fe5xIfEScUafADkD9:nth-of-type(6)
 auctions.yahoo.co.jp###pcMainMenu > section.gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM:nth-of-type(2) > nav > .gv-List--WzLFZ0DGmnA3lexjomwT > li.gv-List__item--SB6fe5xIfEScUafADkD9:nth-of-type(4) > .gv-List__itemInner--arrow--id8W4qugOEalkc3Dz0MA.gv-List__itemInner--sI3m3wLvRrODmdBAe5mU
 auctions.yahoo.co.jp###option > .gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM > nav > .gv-List--WzLFZ0DGmnA3lexjomwT > li.gv-List__item--SB6fe5xIfEScUafADkD9:nth-of-type(3)

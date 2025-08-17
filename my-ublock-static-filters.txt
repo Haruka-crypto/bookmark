@@ -1,0 +1,229 @@
+[Adblock Plus 2.0]
+
+!furimawatch
+www.furimawatch.net##button.btn-sm.btn-primary.btn:nth-of-type(1)
+www.furimawatch.net##button.btn-sm.btn-primary.btn:nth-of-type(3)
+
+!Yafuoku-mytop
+auctions.yahoo.co.jp###promo
+auctions.yahoo.co.jp##li.gv-List__item--SB6fe5xIfEScUafADkD9:nth-of-type(6)
+auctions.yahoo.co.jp###pcMainMenu > section.gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM:nth-of-type(2) > nav > .gv-List--WzLFZ0DGmnA3lexjomwT > li.gv-List__item--SB6fe5xIfEScUafADkD9:nth-of-type(4) > .gv-List__itemInner--arrow--id8W4qugOEalkc3Dz0MA.gv-List__itemInner--sI3m3wLvRrODmdBAe5mU
+auctions.yahoo.co.jp###option > .gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM > nav > .gv-List--WzLFZ0DGmnA3lexjomwT > li.gv-List__item--SB6fe5xIfEScUafADkD9:nth-of-type(3)
+auctions.yahoo.co.jp##li.gv-List__item--SB6fe5xIfEScUafADkD9:nth-of-type(7)
+auctions.yahoo.co.jp###option > .gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM > nav > .gv-List--WzLFZ0DGmnA3lexjomwT > li.gv-List__item--SB6fe5xIfEScUafADkD9:nth-of-type(2)
+auctions.yahoo.co.jp###pcMainMenu > section.gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM:nth-of-type(2) > nav > .gv-List--WzLFZ0DGmnA3lexjomwT > li.gv-List__item--SB6fe5xIfEScUafADkD9:nth-of-type(3)
+auctions.yahoo.co.jp###pcMainMenu > section.gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM:nth-of-type(2) > nav > .gv-List--WzLFZ0DGmnA3lexjomwT > li.gv-List__item--SB6fe5xIfEScUafADkD9:nth-of-type(1)
+auctions.yahoo.co.jp###option > .gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM > nav > .gv-List--WzLFZ0DGmnA3lexjomwT > li.gv-List__item--SB6fe5xIfEScUafADkD9:nth-of-type(4)
+auctions.yahoo.co.jp###meisai > .gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM > nav > .gv-List--WzLFZ0DGmnA3lexjomwT > li.gv-List__item--SB6fe5xIfEScUafADkD9:nth-of-type(4)
+auctions.yahoo.co.jp###meisai > .gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM > nav > .gv-List--WzLFZ0DGmnA3lexjomwT > li.gv-List__item--SB6fe5xIfEScUafADkD9:nth-of-type(5)
+auctions.yahoo.co.jp###pcMainMenu > section.gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM:nth-of-type(2)
+auctions.yahoo.co.jp##.eWPBJg.sc-dac0c00c-0
+auctions.yahoo.co.jp###meisai > .gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM .gv-u-padding4--yczhT86ZUgUCJ1HCe8FG
+auctions.yahoo.co.jp###option > .gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM .gv-u-padding4--yczhT86ZUgUCJ1HCe8FG
+auctions.yahoo.co.jp###meisai > .gv-Card--responsive--Z3L605GeO6wwLGzrw_Sg.gv-Card--noPadding--qgxuQuobo2eb2Oh3vL1c.gv-Card--uDxEvPl4of_XKZDma4LM > nav > .gv-List--WzLFZ0DGmnA3lexjomwT > li.gv-List__item--SB6fe5xIfEScUafADkD9 > .gv-List__itemInner--arrow--id8W4qugOEalkc3Dz0MA.gv-List__itemInner--sI3m3wLvRrODmdBAe5mU > .gv-List__itemText--fx_exuf_KgH1XE5yqw0U > .gv-Stack--alignStretch--C502kiIPA_E3E52eQjpb.gv-Stack--nowrap--NGjRta1Qhd655VMZzLPA.gv-Stack--row--pYaEuAl4E8GlpVqxHHCw.gv-Stack--hSpace1--hCY53KOXYSzwtwKr9swY.gv-Stack--u0Jmo3VPNKDclxaV81yY > .gv-u-displayBlock--tYKe7k2hLU4hsa0S5vuq > .gv-u-displayBlock--tYKe7k2hLU4hsa0S5vuq > .gv-u-colorContentOnSurfaceVariant--iGAjy0BdpomNMjXrpED_.gv-u-fontSize12--s5WnvVgDScOXPWU7Mgqd
+auctions.yahoo.co.jp###bidsll
+auctions.yahoo.co.jp##.jgNZTr.sc-84a1a354-0
+yahoo.co.jp###emg
+yahoo.co.jp##.emg
+auctions.yahoo.co.jp###msthd
+
+!Yafuoku-selling
+auctions.yahoo.co.jp###acWrContents > .wrapper > center
+
+!yafuoku-torihiki
+contact.auctions.yahoo.co.jp###TEMPLA_MH_VDOM
+
+!Yafuoku-closed
+||s.yimg.jp/images/auct/salespromotion/*.png$image
+auctions.yahoo.co.jp##center > table > tbody > tr > td > small
+
+!Yafuoku-won
+||s.yimg.jp/images/premium/contents/bnr/*.png$image
+
+!Yafuoku-watchlist
+auctions.yahoo.co.jp##div.u-marginH10.u-marginT30.js-carousel.Carousel
+auctions.yahoo.co.jp###modSsBox
+auctions.yahoo.co.jp##div.gv-u-marginB5.js-carousel.Carousel
+
+!Yafuoku-syohingamen
+page.auctions.yahoo.co.jp##.u-marginB20.PayPayBanner
+page.auctions.yahoo.co.jp##.StatisticsInfo__text
+page.auctions.yahoo.co.jp##.Button--normalSmall.Button.StatisticsInfo__button
+page.auctions.yahoo.co.jp##.PriceChange
+page.auctions.yahoo.co.jp##.ProductInformation__note
+page.auctions.yahoo.co.jp##.js-recommend-wrap.js-Carousel.Carousel
+page.auctions.yahoo.co.jp##.js-recommend-wrap.RecommendList
+page.auctions.yahoo.co.jp###l-footer
+page.auctions.yahoo.co.jp###recommendTop
+page.auctions.yahoo.co.jp###recommendBottom
+page.auctions.yahoo.co.jp##.RecommendList--small.RecommendList
+page.auctions.yahoo.co.jp##.js-expand-ymobile.PromoExpand > .is-close.js-expand-body.PromoExpand__body > .PromoExpand__title
+page.auctions.yahoo.co.jp###auc_detail_jnbcp2_pc > .ProductInformation__item
+page.auctions.yahoo.co.jp###modLoanBox > .untBody
+page.auctions.yahoo.co.jp##.ServiceInfo
+page.auctions.yahoo.co.jp##.LowPrice
+page.auctions.yahoo.co.jp##.Seller__alertButton
+page.auctions.yahoo.co.jp###auc_detail_paylater_pc
+page.auctions.yahoo.co.jp##.ProductProcedures__header
+page.auctions.yahoo.co.jp##.StatisticsInfo__featured
+page.auctions.yahoo.co.jp##.js-postionRight.ProductTable__row
+page.auctions.yahoo.co.jp##.u-marginB30.u-marginT15.Banner
+page.auctions.yahoo.co.jp##.SocialButton__lists
+page.auctions.yahoo.co.jp##.StatisticsInfo__header
+page.auctions.yahoo.co.jp##.is-CarouselDisabled.js-Carousel.Carousel--popularBrand.Carousel
+page.auctions.yahoo.co.jp##.Promotion__body
+page.auctions.yahoo.co.jp##.l-contentsFoot
+
+!yafuoku-syuppin
+||s.yimg.jp/images/auct/cms/guide/ekyc/bnr/*.png
+||s.yimg.jp/images/payment/bnr/*.png
+||s.yimg.jp/images/auct/*ekyc_pc.png
+auctions.yahoo.co.jp###js-PCPremiumAppealArea
+auctions.yahoo.co.jp###js-PCPremiumScheduleArea
+auctions.yahoo.co.jp##.DirectionPaypay
+auctions.yahoo.co.jp##.CrossListingTry
+auctions.yahoo.co.jp##p.u-marginV10.notation
+auctions.yahoo.co.jp##section > .u-marginV15 > .Title
+auctions.yahoo.co.jp##.u-marginV20 > .Title
+auctions.yahoo.co.jp##.modFootMenu
+auctions.yahoo.co.jp###modFormReqrd > section:nth-of-type(2) > div.u-marginV30:nth-of-type(2)
+auctions.yahoo.co.jp##div.u-marginT20.js-checkbox-wrap.CheckBox:nth-of-type(2)
+auctions.yahoo.co.jp##div.u-marginT20.js-checkbox-wrap.CheckBox:nth-of-type(3)
+auctions.yahoo.co.jp##div.u-marginT20.js-checkbox-wrap.CheckBox:nth-of-type(4)
+auctions.yahoo.co.jp##div.u-marginT20.js-checkbox-wrap.CheckBox:nth-of-type(5)
+auctions.yahoo.co.jp##div.u-marginT20.js-checkbox-wrap.CheckBox:nth-of-type(6)
+
+!yafuoku-serach
+auctions.yahoo.co.jp##section.js-carousel.Carousel--catalog.Carousel
+auctions.yahoo.co.jp##.js-carousel.Carousel--popularBrand.Carousel
+auctions.yahoo.co.jp##.Result__footer
+
+!yafuoku-Overlay
+auctions.yahoo.co.jp##.gDhRlk.Component-sc-17vqr5j
+auctions.yahoo.co.jp##.elOverlayScreen
+auctions.yahoo.co.jp##.cylXqn.Component-sc-dzxrtg
+
+!Ymail
+mail.yahoo.co.jp###TEMPLA_MH_VDOM
+
+!yahoo
+||s.yimg.jp/images/yjtop-common/hazard/coronavirus/*.png
+||s.yimg.jp/images/listing/deliveryope/*.gif
+||s.yimg.jp/images/yjtop-common/*.png
+||s.yimg.jp/images/*bn*.jpg
+||s.yimg.jp/images/*bn*.png
+
+yahoo.co.jp##.EmgModule__earthquake
+www.yahoo.co.jp###eyebrow
+www.yahoo.co.jp###Masthead
+www.yahoo.co.jp###TopLink
+www.yahoo.co.jp###biz
+www.yahoo.co.jp###csr
+www.yahoo.co.jp###info
+www.yahoo.co.jp###clvmoduleeccllinkshptsvcclposition0
+www.yahoo.co.jp###clvmoduleec2cllinkaucusvcclposition0
+www.yahoo.co.jp###clvmoduleeccllinkaucusvcclposition0
+www.yahoo.co.jp###clvmoduleec2cllinkshptsvcclposition0
+www.yahoo.co.jp###Service
+www.yahoo.co.jp###Scoreboard
+www.yahoo.co.jp###footer
+www.yahoo.co.jp###EMG
+www.yahoo.co.jp###typhoon
+www.yahoo.co.jp###Campaign
+www.yahoo.co.jp###Stream
+www.yahoo.co.jp###realtime
+www.yahoo.co.jp###PayPayFes
+www.yahoo.co.jp###video
+www.yahoo.co.jp###hsb
+www.yahoo.co.jp###Olympic
+
+www.yahoo.co.jp##.teuD4hYGR9raSPgh21EcK
+www.yahoo.co.jp##._1UrHO06KkOZS11BM_2z_-r
+
+www.yahoo.co.jp##li:nth-of-type(10)
+www.yahoo.co.jp##li:nth-of-type(11)
+www.yahoo.co.jp##li:nth-of-type(12)
+www.yahoo.co.jp##li:nth-of-type(13)
+www.yahoo.co.jp##li:nth-of-type(14)
+www.yahoo.co.jp##li:nth-of-type(15)
+www.yahoo.co.jp##li:nth-of-type(16)
+www.yahoo.co.jp##li:nth-of-type(17)
+www.yahoo.co.jp##li:nth-of-type(18)
+www.yahoo.co.jp##li:nth-of-type(19)
+www.yahoo.co.jp##li:nth-of-type(20)
+www.yahoo.co.jp##li:nth-of-type(21)
+www.yahoo.co.jp##li:nth-of-type(22)
+www.yahoo.co.jp##li:nth-of-type(23)
+www.yahoo.co.jp##li:nth-of-type(24)
+www.yahoo.co.jp##li:nth-of-type(25)
+www.yahoo.co.jp##li:nth-of-type(26)
+www.yahoo.co.jp##li:nth-of-type(27)
+www.yahoo.co.jp##li:nth-of-type(28)
+www.yahoo.co.jp##li:nth-of-type(29)
+www.yahoo.co.jp##li:nth-of-type(30)
+www.yahoo.co.jp##li:nth-of-type(31)
+www.yahoo.co.jp##li:nth-of-type(32)
+www.yahoo.co.jp##li:nth-of-type(33)
+www.yahoo.co.jp##li:nth-of-type(34)
+www.yahoo.co.jp##li:nth-of-type(35)
+www.yahoo.co.jp##li:nth-of-type(36)
+www.yahoo.co.jp##li:nth-of-type(37)
+
+!gmail
+mail.google.com##.mA.T-I-Js-IF.T-I-Js-Gs.T-I-ax7.nN.J-J5-Ji.T-I
+
+!keep
+keep.google.com##div.N4imRe-DWWcKd-EfADOe:nth-child(24)
+
+!dropbox
+dropbox.com##.prompt-top-notification-container
+
+!suruga-bank
+ib.surugabank.co.jp##tr.even-row > td > p
+ib.surugabank.co.jp##tr.odd-row > td > p
+
+!nico
+@@nicoad.nicovideo.jp
+nicovideo.jp##.BottomContainer-main.GridCell > .BottomContainer-card:nth-of-type(3)
+nicovideo.jp##.video.searchUad.uad.contentBody
+nicovideo.jp##.sub.column
+nicovideo.jp##.tagListBox
+nicovideo.jp##.contentBody > .itemDescription
+nicovideo.jp##.BottomContainer > div:nth-of-type(1)
+nicovideo.jp##.TagkeyArticleBox
+nicovideo.jp##.NicoSpotAdContainer.CommentPanelBannerAd
+nicovideo.jp##.billboard_ad
+nicovideo.jp##.nicodicNicoadVideoList.uad.video.contentBody
+nicovideo.jp##.nicoadVideoItem.item
+
+!amazon.co.jp
+amazon.co.jp###sponsoredLinksCSA
+amazon.co.jp###ape_Detail_ad-endcap-1_Glance_placement
+amazon.co.jp###sponsored-products-dp_feature_div
+amazon.co.jp###rhf-container
+amazon.co.jp###ape_Detail_dp-ads-center-promo_Desktop_placement
+amazon.co.jp###ADPlaceholder
+amazon.co.jp###ape_Detail_ams-detail-right-v2_Desktop_placement
+amazon.co.jp###desktop-3
+amazon.co.jp###search-desktop-advertising-left-1 > .advertisingTable
+amazon.co.jp###search-desktop-advertising-bottom-1 > .advertisingTable
+amazon.co.jp###quickPromoBucketContent
+amazon.co.jp###view_to_purchase-sims-feature
+amazon.co.jp###purchase-sims-feature
+amazon.co.jp###session-sims-feature
+amazon.co.jp###sims-fbt
+amazon.co.jp###sims-carousel-holder
+
+!pixiv
+www.pixiv.net##.HQBqdk5._premium-lead-popular-d-body
+
+!twitter
+twitter.com##.r-1bro5k0:style(display:none !important;)
+twitter.com##div.r-1udh08x.r-1ifxtd0.r-rs99b7.r-1phboty.r-1867qdf.r-1d6w8o1.r-x572qd.css-1dbjc4n
+
+!Youtbe
+www.youtube.com###sparkles-container
+
+!etc
+##.rss-blogroll
+blog.livedoor.jp##.blogroll-wrapper

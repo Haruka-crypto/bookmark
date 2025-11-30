@@ -30,6 +30,7 @@ auctions.yahoo.co.jp###msthd
 
 !Yafuoku-selling
 auctions.yahoo.co.jp###acWrContents > .wrapper > center
+auctions.yahoo.co.jp##.gv-Message--noTitle--eFINvpXdph1dDQ6pcUWD.gv-Message--hint--JPr0_mEXW0m_EXzeoiIw.gv-Message--VfQdydFv7R7rEI8GeaBO
 
 !yafuoku-torihiki
 contact.auctions.yahoo.co.jp###TEMPLA_MH_VDOM

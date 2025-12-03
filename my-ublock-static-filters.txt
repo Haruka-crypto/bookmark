@@ -27,6 +27,7 @@ auctions.yahoo.co.jp##.jgNZTr.sc-84a1a354-0
 yahoo.co.jp###emg
 yahoo.co.jp##.emg
 auctions.yahoo.co.jp###msthd
+auctions.yahoo.co.jp##.jUjFxz.sc-74c2d143-0
 
 !Yafuoku-selling
 auctions.yahoo.co.jp###acWrContents > .wrapper > center

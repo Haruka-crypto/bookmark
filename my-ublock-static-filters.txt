@@ -28,6 +28,8 @@ yahoo.co.jp###emg
 yahoo.co.jp##.emg
 auctions.yahoo.co.jp###msthd
 auctions.yahoo.co.jp##.jUjFxz.sc-74c2d143-0
+auctions.yahoo.co.jp###ack
+auctions.yahoo.co.jp###rc
 
 !Yafuoku-selling
 auctions.yahoo.co.jp###acWrContents > .wrapper > center

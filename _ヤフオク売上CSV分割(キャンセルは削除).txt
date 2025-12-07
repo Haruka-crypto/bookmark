@@ -1,0 +1,124 @@
+// --- 設定 ---
+const HEADER_ROWS_TO_SKIP = 1; 
+
+// --- 列インデックス定義（A列=0, B列=1...）---
+const TRANSACTION_DATE_COL = 0; // 取扱日 (A列)
+const PRODUCT_ID_COL = 3;       // 商品ID (D列)
+const PRODUCT_NAME_COL = 4;     // 商品名 (E列)
+const SALES_AMOUNT_COL = 7;     // 落札者/購入者の支払金額 (H列) - 売上
+const AUCTION_FEE_COL = 8;      // Yahoo!オークション 落札システム利用料 (I列) - 経費
+const FLEA_MARKET_FEE_COL = 9;  // Yahoo!フリマ 販売手数料 (J列) - 経費
+const SHIPPING_COL = 10;        // 送料 (K列) - 経費
+const STATE_COL = 11;           // 状態 (L列)
+
+/**
+ * 金額値（文字列または数値）を確実に数値（Number）に変換する
+ */
+function parseAmount(amountValue) {
+  if (typeof amountValue === 'number') {
+    return amountValue; // 既に数値ならそのまま
+  }
+  if (!amountValue) {
+    return 0; // Nullまたは空欄なら0
+  }
+  // 高速化のため、正規表現をシンプルな文字列置換に変更
+  let amountString = String(amountValue).trim(); 
+  if (amountString === "-") {
+    return 0;
+  }
+  amountString = amountString.replace(/,/g, '').replace(/"/g, ''); // カンマと"を除去
+
+  const num = parseFloat(amountString);
+  return isNaN(num) ? 0 : num;
+}
+
+/**
+ * ヤフオク/フリマの売上データをマネフォ取込用に分割処理するメイン関数
+ * 高速化のため、Array.prototype.flatMap() を使用
+ */
+function splitYahooSalesData() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sourceSheet = ss.getActiveSheet(); 
+  
+  const values = sourceSheet.getDataRange().getValues();
+  
+  if (values.length <= HEADER_ROWS_TO_SKIP) {
+    Browser.msgBox('エラー', 'データがありません。', Browser.Buttons.OK);
+    return;
+  }
+  
+  // マネフォ取込用のヘッダー行を定義
+  const outputHeader = ["取引日", "商品ID", "商品名", "内容（勘定科目）", "金額"];
+  
+  // ヘッダー行を除いたデータ行を取得
+  const dataRows = values.slice(HEADER_ROWS_TO_SKIP);
+  
+  // --- 🚀 高速化処理 (flatMap) ---
+  // dataRows を一度の操作で「フィルタリング」と「変換（1行->複数行）」を行う
+  const processedData = dataRows.flatMap(row => {
+    
+    // 1. キャンセル行を除外（フィルタリング）
+    const status = String(row[STATE_COL]).trim();
+    if (status.includes("キャンセル") || status.includes("削除")) { 
+      return []; // この行からは何も出力しない（＝除外）
+    }
+    
+    // 2. 行を変換（マッピング）
+    const transactionDate = row[TRANSACTION_DATE_COL];
+    const productId = row[PRODUCT_ID_COL];
+    const productName = row[PRODUCT_NAME_COL];
+    
+    const salesAmount = parseAmount(row[SALES_AMOUNT_COL]);
+    const shippingCost = parseAmount(row[SHIPPING_COL]);
+    const auctionFee = parseAmount(row[AUCTION_FEE_COL]);
+    const fleaMarketFee = parseAmount(row[FLEA_MARKET_FEE_COL]);
+    
+    const resultRows = []; // この1行から生成される複数行を格納
+    
+    if (salesAmount > 0) {
+      resultRows.push([transactionDate, productId, productName, "売上高", salesAmount]);
+    }
+    if (shippingCost > 0) {
+      resultRows.push([transactionDate, productId, productName, "荷造運賃", -shippingCost]);
+    }
+    if (auctionFee > 0) {
+      resultRows.push([transactionDate, productId, productName, "支払手数料(ヤフオク)", -auctionFee]);
+    }
+    if (fleaMarketFee > 0) {
+      resultRows.push([transactionDate, productId, productName, "支払手数料(フリマ)", -fleaMarketFee]);
+    }
+    
+    return resultRows; // 例: [ [売上行], [送料行], [手数料行] ]
+  });
+  // ------------------------------
+  
+  // ヘッダー行と処理済みデータを結合
+  const finalOutput = [outputHeader].concat(processedData);
+
+  // --- 結果を新シートに書き込む ---
+  const outputSheetName = "マネフォ取込用";
+  let outputSheet = ss.getSheetByName(outputSheetName);
+  
+  if (outputSheet) {
+    outputSheet.clear();
+  } else {
+    outputSheet = ss.insertSheet(outputSheetName, 0);
+  }
+  
+  // データを一括書き込み
+  outputSheet.getRange(1, 1, finalOutput.length, finalOutput[0].length).setValues(finalOutput);
+  
+  // 🚨 タイムアウト防止のため、列幅の自動調整（autoResizeColumns）は削除しました
+  
+  Browser.msgBox('✅ 処理完了（高速化）', `「${outputSheetName}」シートに ${finalOutput.length - 1} 行のデータを整形して出力しました。`, Browser.Buttons.OK);
+}
+
+/**
+ * メニューにカスタム項目を追加する
+ */
+function onOpen() {
+  SpreadsheetApp.getUi()
+      .createMenu('ヤフオク処理')
+      .addItem('売上データをマネフォ用に分割', 'splitYahooSalesData')
+      .addToUi();
+}

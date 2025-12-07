@@ -1,0 +1,116 @@
+// --- 設定 ---
+// 出金金額（円）が記載されている列のインデックス（A列が0、B列が1...）
+// CSVのB列 -> インデックス 1
+const AMOUNT_COLUMN_INDEX = 1; 
+
+// 取引方法（内訳）が記載されている列のインデックス（A列が0、B列が1...）
+// CSVのJ列 -> インデックス 9
+const DESCRIPTION_COLUMN_INDEX = 9; 
+
+// スキップするヘッダー行の数
+const HEADER_ROWS_TO_SKIP = 1; 
+
+/**
+ * 金額文字列（"1,000" や 1000）を数値（1000）に変換する
+ */
+function parseAmount(amountValue) {
+  if (typeof amountValue === 'number') {
+    return amountValue; // 既に数値ならそのまま
+  }
+  if (!amountValue) {
+    return 0; // Nullまたは空欄なら0
+  }
+  // 高速化のため、正規表現をシンプルな文字列置換に変更
+  let amountString = String(amountValue).trim(); 
+  if (amountString === "-") {
+    return 0;
+  }
+  amountString = amountString.replace(/,/g, '').replace(/"/g, ''); // カンマと"を除去
+
+  const num = parseFloat(amountString);
+  return isNaN(num) ? 0 : num;
+}
+
+/**
+ * PayPay履歴の併用払い行を、残高利用行とポイント利用行に分割する
+ * 高速化のため、Array.prototype.flatMap() を使用
+ */
+function splitPayPayTransaction() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getActiveSheet();
+  
+  const range = sheet.getDataRange();
+  const values = range.getValues();
+  
+  if (values.length <= HEADER_ROWS_TO_SKIP) {
+    Browser.msgBox('エラー', 'データがありません。', Browser.Buttons.OK);
+    return;
+  }
+  
+  const headerRows = values.slice(0, HEADER_ROWS_TO_SKIP);
+  const dataRows = values.slice(HEADER_ROWS_TO_SKIP);
+  
+  // --- 🚀 高速化処理 (flatMap) ---
+  const processedData = dataRows.flatMap(row => {
+    const description = String(row[DESCRIPTION_COLUMN_INDEX]);
+    
+    // 1. 併用払いかチェック
+    if (description.includes("PayPay残高 (") && description.includes("PayPayポイント (")) {
+      const originalAmountText = row[AMOUNT_COLUMN_INDEX];
+      const originalAmount = parseAmount(originalAmountText);
+
+      const balanceMatch = description.match(/PayPay残高 \(([0-9,]+)円\)/);
+      const pointMatch = description.match(/PayPayポイント \(([0-9,]+)円\)/);
+      
+      if (balanceMatch && pointMatch) {
+        const balanceAmount = parseAmount(balanceMatch[1]);
+        const pointAmount = parseAmount(pointMatch[1]);
+        
+        // 金額チェック
+        if (Math.round((balanceAmount + pointAmount) * 100) / 100 !== originalAmount) {
+          // 金額が一致しない場合は、分割せず元の行をそのまま返す
+          return [row]; 
+        }
+
+        // 2. 残高行とポイント行の2行を生成して返す
+        let balanceRow = [...row];
+        balanceRow[AMOUNT_COLUMN_INDEX] = balanceAmount;
+        balanceRow[DESCRIPTION_COLUMN_INDEX] = "PayPay残高利用";
+        
+        let pointRow = [...row];
+        pointRow[AMOUNT_COLUMN_INDEX] = pointAmount;
+        pointRow[DESCRIPTION_COLUMN_INDEX] = "PayPayポイント利用";
+        
+        return [balanceRow, pointRow]; // 1行が2行になる
+        
+      } else {
+        // 正規表現にマッチしなかった場合（あり得ないが安全のため）
+        return [row]; // 元の行をそのまま返す
+      }
+      
+    } else {
+      // 併用払いではない行
+      return [row]; // 元の行をそのまま返す
+    }
+  });
+  // ------------------------------
+  
+  // ヘッダー行と処理済みデータを結合
+  const finalValues = headerRows.concat(processedData);
+  
+  // --- 4. 新しいデータをシートに書き戻す ---
+  sheet.clearContents();
+  sheet.getRange(1, 1, finalValues.length, finalValues[0].length).setValues(finalValues);
+  
+  Browser.msgBox('✅ 処理完了（高速化）', `PayPay履歴の処理が完了しました。`, Browser.Buttons.OK);
+}
+
+/**
+ * メニューにカスタム項目を追加する
+ */
+function onOpen() {
+  SpreadsheetApp.getUi()
+      .createMenu('PayPay履歴')
+      .addItem('併用払い行を分割・修正', 'splitPayPayTransaction')
+      .addToUi();
+}

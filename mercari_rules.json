@@ -1,0 +1,16 @@
+{
+  "providers": {
+    "mercari": {
+      "urlPattern": "^https?:\\/\\/(?:[a-z0-9-]+\\.)*?mercari\\.com",
+      "completeProvider": false,
+      "rules": [],
+      "rawRules": [
+        "[?&](?:a8|afid)=.*"
+      ],
+      "referralMarketing": [],
+      "exceptions": [],
+      "redirections": [],
+      "forceRedirection": false
+    }
+  }
+}

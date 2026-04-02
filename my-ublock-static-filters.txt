@@ -4,6 +4,10 @@
 www.furimawatch.net##button.btn-sm.btn-primary.btn:nth-of-type(1)
 www.furimawatch.net##button.btn-sm.btn-primary.btn:nth-of-type(3)
 
+!mercari
+||jp.mercari.com^$queryprune=a8
+||jp.mercari.com^$queryprune=afid
+
 !Yafuoku-mytop
 auctions.yahoo.co.jp###promo
 auctions.yahoo.co.jp###wrapper > header.gv-l-header--x08n25swK4TimjnzPqsA:first-child > div.gv-l-headerInner--gmEJwcnBd6SrLgPqMmfH > div.sc-41669be6-0.eJmRbH:nth-child(2)

@@ -141,6 +141,7 @@ www.yahoo.co.jp###PayPayFes
 www.yahoo.co.jp###video
 www.yahoo.co.jp###hsb
 www.yahoo.co.jp###Olympic
+www.yahoo.co.jp###tool_pickup
 
 www.yahoo.co.jp##.teuD4hYGR9raSPgh21EcK
 www.yahoo.co.jp##._1UrHO06KkOZS11BM_2z_-r

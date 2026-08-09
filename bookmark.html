@@ -7,6 +7,27 @@
 <link rel=”icon” href=“/image/favicon.ico”>
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.webp" sizes="180x180">
 </head>
+<script>
+(function () {
+  const BG = [
+    { from: 5,  img: 'bg_morning.webp'  },  // 05:00-10:59
+    { from: 11, img: 'bg_day.webp'      },  // 11:00-15:59
+    { from: 16, img: 'bg_evening.webp'  },  // 16:00-18:59
+    { from: 19, img: 'bg_night.webp'    },  // 19:00-04:59
+  ];
+  function apply() {
+    const h = new Date().getHours();
+    let cur = BG[BG.length - 1];           // 0時〜4時台は夜の画像
+    for (const b of BG) if (h >= b.from) cur = b;
+    if (document.body.dataset.bg === cur.img) return;
+    document.body.dataset.bg = cur.img;
+    document.body.style.backgroundImage = `url("${cur.img}")`;
+  }
+  apply();
+  setInterval(apply, 60000);   // 開きっぱなしでも自動で切り替わる
+})();
+</script>
+  
 <BODY bgcolor="#f0f0f0" style="background-image:url(bgharuka.jpg);background-repeat:repeat-y;background-attachment:fixed;background-position:right;background-size:contain;">
 <font size="5" face="Thonburi">
 

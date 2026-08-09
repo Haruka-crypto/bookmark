@@ -10,21 +10,40 @@
 <script>
 (function () {
   const BG = [
-    { from: 5,  img: 'bg_morning.webp'  },  // 05:00-10:59
-    { from: 11, img: 'bg_day.webp'      },  // 11:00-15:59
-    { from: 16, img: 'bg_evening.webp'  },  // 16:00-18:59
-    { from: 19, img: 'bg_night.webp'    },  // 19:00-04:59
+    { from: 5,  img: 'bg_morning.webp' },
+    { from: 11, img: 'bg_day.webp'     },
+    { from: 16, img: 'bg_evening.webp' },
+    { from: 19, img: 'bg_night.webp'   },
   ];
-  function apply() {
-    const h = new Date().getHours();
-    let cur = BG[BG.length - 1];           // 0時〜4時台は夜の画像
-    for (const b of BG) if (h >= b.from) cur = b;
-    if (document.body.dataset.bg === cur.img) return;
-    document.body.dataset.bg = cur.img;
-    document.body.style.backgroundImage = `url("${cur.img}")`;
+
+  function start() {
+    const style = document.createElement('style');
+    style.textContent =
+      '#bg-layer{position:fixed;inset:0;z-index:-1;background-size:cover;' +
+      'background-position:center;transition:opacity .8s ease}';
+    document.head.appendChild(style);
+
+    const layer = document.createElement('div');
+    layer.id = 'bg-layer';
+    document.body.appendChild(layer);
+    document.body.style.backgroundImage = 'none';   // 旧壁紙を無効化
+
+    function apply() {
+      const h = new Date().getHours();
+      let cur = BG[BG.length - 1];
+      for (const b of BG) if (h >= b.from) cur = b;
+      if (layer.dataset.bg === cur.img) return;
+      layer.dataset.bg = cur.img;
+      layer.style.backgroundImage = 'url("' + cur.img + '")';
+      console.log('[bg]', h + '時 →', cur.img);   // 動作確認用
+    }
+    apply();
+    setInterval(apply, 60000);
   }
-  apply();
-  setInterval(apply, 60000);   // 開きっぱなしでも自動で切り替わる
+
+  document.readyState === 'loading'
+    ? document.addEventListener('DOMContentLoaded', start)
+    : start();
 })();
 </script>
   
